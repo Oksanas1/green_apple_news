@@ -1,0 +1,66 @@
+/* INFORMATION */
+
+.information {
+   @include vertical($site_width);
+
+   &-item {
+      @include percentage(190px);
+      
+      display: inline-block;
+      vertical-align: top;
+
+      & + & {
+         margin-left: percentage(50px);
+      }
+   }
+
+   &-name {
+      display: inline-block;
+      vertical-align: top;
+      min-width: 56px;
+      border-radius: 50%;
+      background: $green03;
+      line-height: 56px;
+      font-size: 40px;
+      font-family: $font_second;
+      color: $white02;
+      text-transform: uppercase;
+      text-align: center;
+      margin-right: 10px;
+   }
+
+   &-title {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 120px;
+      font-size: 28px;
+      font-family: $font_second;
+      font-weight: 600;
+      color: $black03;
+      letter-spacing: -3px;
+      line-height: 1;
+      text-align: left;
+      margin-bottom: 20px;
+   }
+
+   &-content {
+      font-size: 14px;
+      font-family: $font_main;
+      font-style: italic;
+      color: $grey02;
+      line-height: 1.5;
+      margin-bottom: 20px;
+
+      &-span {
+         text-decoration: underline;
+      }
+   }
+
+   &-link {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $green03;
+      text-decoration: underline;
+   }
+}
+

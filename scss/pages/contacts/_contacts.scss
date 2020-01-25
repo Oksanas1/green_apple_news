@@ -1,0 +1,130 @@
+/* CONTACTS */
+
+.contacts {
+   @include vertical($site_width);
+   @include clearfix;
+
+   &-section_form {
+      @include percentage(670px);
+
+      float: left;
+   }
+
+   &-title {
+      font-size: 42px;
+      font-family: $font_second;
+      font-weight: 600;
+      color: $black03;
+      line-height: 1;
+      letter-spacing: -3px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $white04;
+      margin-bottom: 20px;
+   }
+
+   &-form {
+      width: 100%;
+   }
+
+   &-labels {
+      font-size: 0;
+
+      & + & {
+         margin-top: 5px;
+      }
+   }
+
+   &-label {
+      display: inline-block;
+      vertical-align: top;
+      width:percentage(110px, 670px);
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      font-style: italic;
+      line-height: 25px;
+   }
+
+   &-input {
+      border: 1px solid $white04;
+      width: percentage(280px, 670px);
+      padding: 10px;
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+   }
+
+   &-text {
+      border: 1px solid $white04;
+      width: percentage(560px, 670px);
+      height: 265px;
+      padding: 10px;
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+   }
+
+   &-submits {
+      text-align: right;
+      margin-top: 15px;
+   }
+
+   &-button {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $white02;
+      font-weight: bold;
+      line-height: 32px;
+      text-align: center;
+      padding: 0 15px;
+      background: $green03;
+
+      & + & {
+         margin-left: 10px;
+      }
+   }
+
+   &-section_infornation {
+      @include percentage(220px);
+
+      float: right;
+   }
+
+   &-adress {
+      margin-bottom: 45px;
+   }
+
+   &-item {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      font-style: italic;
+      line-height: 1.5;
+   }
+
+   &-subtitle {
+      display: inline-block;
+      min-width: 80px;
+      font-size: 14px;
+      font-family: $font_main;
+      color: $black03;
+   }
+
+   &-link {
+      color: $grey02;
+
+      &.email {
+      color: $green03;
+      text-decoration: underline;
+      }
+   }
+
+   &-conetnt { 
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      font-style: italic;
+      line-height: 1.5; 
+   }
+}
+

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "icons";
+  src: url('../fonts/icons/icons.eot');
+  src: url('../fonts/icons/icons.eot?#iefix') format('eot'),
+  url('../fonts/icons/icons.woff2') format('woff2'),
+  url('../fonts/icons/icons.woff') format('woff'),
+  url('../fonts/icons/icons.ttf') format('truetype'),
+  url('../fonts/icons/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 32px;
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+  @if $filename == arrow-doun {
+  $char: "\E001";
+}
+  @if $filename == arrow_right {
+  $char: "\E002";
+}
+  @if $filename == arrow_up {
+  $char: "\E003";
+}
+  @if $filename == header_home {
+  $char: "\E004";
+}
+  @if $filename == header_letter {
+  $char: "\E005";
+}
+  @if $filename == header_list {
+  $char: "\E006";
+}
+  @if $filename == header_pen {
+  $char: "\E007";
+}
+  @if $filename == header_setting {
+  $char: "\E008";
+}
+  @if $filename == services_list1 {
+  $char: "\E009";
+}
+  @if $filename == services_list2 {
+  $char: "\E00A";
+}
+  @if $filename == services_list3 {
+  $char: "\E00B";
+}
+  @if $filename == services_list4 {
+  $char: "\E00C";
+}
+  @if $filename == services_list5 {
+  $char: "\E00D";
+}
+  @if $filename == services_list6 {
+  $char: "\E00E";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %icon;
+  } @else {
+    @include icon-styles;
+  }
+  content: icon-char($filename);
+}
+}
+
+.icon-arrow-doun {
+  @include icon(arrow-doun);
+}
+.icon-arrow_right {
+  @include icon(arrow_right);
+}
+.icon-arrow_up {
+  @include icon(arrow_up);
+}
+.icon-header_home {
+  @include icon(header_home);
+}
+.icon-header_letter {
+  @include icon(header_letter);
+}
+.icon-header_list {
+  @include icon(header_list);
+}
+.icon-header_pen {
+  @include icon(header_pen);
+}
+.icon-header_setting {
+  @include icon(header_setting);
+}
+.icon-services_list1 {
+  @include icon(services_list1);
+}
+.icon-services_list2 {
+  @include icon(services_list2);
+}
+.icon-services_list3 {
+  @include icon(services_list3);
+}
+.icon-services_list4 {
+  @include icon(services_list4);
+}
+.icon-services_list5 {
+  @include icon(services_list5);
+}
+.icon-services_list6 {
+  @include icon(services_list6);
+}

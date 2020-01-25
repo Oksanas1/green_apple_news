@@ -1,0 +1,69 @@
+@mixin image_block ($width: 100%){
+   display: block;
+   width: $width;
+}
+
+@mixin image_position ($value: auto) {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   margin: $value;
+}
+
+@function percentage ($current, $parent: $site_width) {
+   @return ($current / $parent * 100%);
+}
+
+@mixin percentage ($current, $parent: $site_width) {
+   width: $current / $parent * 100%;
+}
+
+@mixin clearfix {
+   &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      clear: both;
+   }
+}
+
+@mixin justify {
+   text-align: justify;
+  
+  &::after {
+   content: "";
+   display: inline-block;
+   width: 100%;
+  }
+}
+
+@mixin vertical($max-width, $width: 100%, $margin: 0 auto) {
+   width: $width;
+   max-width: $max-width;
+   margin: $margin;
+}
+
+@mixin position ($top: 0, $left: 0, $right: 0, $position: absolute) {
+   position: $position;
+   top: $top;
+   left: $left;
+   right: $right;
+}
+
+@mixin position_bottom ($bottom: 0, $left: 0, $right: 0, $position: absolute) {
+   position: $position;
+   bottom: $bottom;
+   left: $left;
+   right: $right;
+}
+
+@mixin height ($padding) {
+   &::before {
+      content: "";
+      display: block;
+      padding-top: $padding;
+   }
+}
+

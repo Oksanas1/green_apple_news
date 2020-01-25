@@ -1,0 +1,118 @@
+/* NEWS */
+
+.news {
+   @include vertical($site_width);
+
+   &-list {
+      margin-bottom: 40px;
+   }
+
+   &-item {
+      & + & {
+         margin-top: 40px;
+      }
+   }
+
+   &-header {
+      @include clearfix;
+      margin-bottom: 15px;
+   }
+
+   &-date {
+      float: left;
+      min-width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: $green03;
+      font-size: 36px;
+      font-family: $font_second;
+      color: $white02;
+      text-align: center;
+      letter-spacing: -2px;
+      line-height: 1;
+      padding-top: 5px;
+
+      &-span {
+         display: block;
+         font-size: 14px;
+         font-weight: normal;
+         line-height: 1;
+      }
+   }
+
+   &-title {
+      float: right;
+      width: percentage(870px);
+      display: inline-block;
+      vertical-align: top;
+      font-size: 35px;
+      font-family:$font_second;
+      font-weight: normal;
+      color: $black03;
+      line-height: 56px;
+      letter-spacing: -3px;
+   }
+
+   &-image {
+      @include image_block;
+
+      &-wrapper {
+         float: left;
+         max-width: 180px;
+         height: 140px;
+         overflow: hidden;
+         margin-right: 15px;
+      }
+   }
+
+   &-description {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 15px;
+   }
+
+   &-link {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $green03;
+      text-decoration: underline;
+   }
+}
+
+.pagination {
+   &-list {
+      text-align: center;
+   }
+
+   &-item {
+      display: inline-block;
+
+      & + & {
+         margin-left: 1px;
+      }
+   }
+
+   &-link {
+      display: block;
+      width: 32px;
+      line-height: 32px;
+      background: $green03;
+      font-size: 21px;
+      font-family: $font_second;
+      color: $white02;
+      text-align: center;
+
+      &:hover {
+         opacity: 0.6;
+      }
+
+      &.active {
+         background: $grey02;
+         transition: background-color .3s;
+      }
+   }
+}
+

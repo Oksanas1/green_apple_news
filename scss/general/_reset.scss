@@ -1,0 +1,38 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, input, button, body {
+   margin: 0;
+   padding: 0;
+}
+
+ul {
+   list-style: none;
+   font-size: 0;
+}
+
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+   cursor: pointer;
+}
+
+
+button,
+input,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+   border: 0;
+   background: none;
+   outline: 0;
+}
+

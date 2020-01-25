@@ -1,0 +1,176 @@
+/*FOOTER*/
+
+.footer {
+   background: $black01;
+
+   &-inner {
+      @include vertical($site_width);
+
+      padding: 50px 0 40px;
+   }
+
+   &-section {
+      @include percentage(200px);
+
+      float: left;
+
+      &.footer-to_sign {
+         @include percentage(220px);
+      }
+
+      & + & {
+         margin-left: percentage(40px);
+      }
+   }
+
+   &-title {
+      font-size: 28px;
+      font-family: $font_second;
+      font-weight: 600;
+      color: $white02;
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 10px;
+   }
+
+   &-list {
+      .information & {
+         padding-left: 10px;
+      }
+      .socials & {
+         padding-left: 25px;
+      }
+   }
+
+   &-item {
+      border-bottom: 1px solid $black02;
+      position: relative;
+      padding: 0 5px;
+
+      &:first-of-type {
+         border-top: 1px solid $black02;
+      }
+   }
+
+   &-link {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      line-height: 28px;
+
+      &.icon-arrow_right::before {
+         position: absolute;
+         bottom: 50%;
+         right: 100%;
+         transform: translateY(50%);
+         width: 7px;
+         margin-right: 5px;
+         font-size: 9px;
+         font-weight: 900;
+      }
+
+      &.email {
+         color: $white01;
+         text-decoration: underline;
+      }
+
+      &.facebook::before {
+         content: "";
+         position: absolute;
+         bottom: 5px;
+         right: 100%;
+         width: 18px;
+         height: 18px;
+         margin-right: 5px;
+         background: url(../img/facebook.png);
+      }
+
+      &.twitter::before {
+         content: "";
+         position: absolute;
+         bottom: 5px;
+         right: 100%;
+         width: 18px;
+         height: 18px;
+         margin-right: 5px;
+         background: url(../img/twitter.png);
+      }
+
+      &.linkedin::before {
+         content: "";
+         position: absolute;
+         bottom: 5px;
+         right: 100%;
+         width: 18px;
+         height: 18px;
+         margin-right: 5px;
+         background: url(../img/linkedin.png);
+      }
+
+      &.delicious::before {
+         content: "";
+         position: absolute;
+         bottom: 5px;
+         right: 100%;
+         width: 18px;
+         height: 18px;
+         margin-right: 5px;
+         background: url(../img/delicious.png);
+      }
+   }
+
+   &-subtitle {
+      display: inline-block;
+      min-width: 60px;
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      line-height: 28px;
+   }
+
+   &-input {
+      width: 100%;
+      line-height: 30px;
+      padding: 0 20px;
+      background: $white02;
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      &::placeholder {
+         color: $white01;
+         font-size: 14px;
+         font-style: italic;
+      }
+   }
+
+   &-submit{
+      float: right;
+      line-height: 30px;
+      padding: 0 10px;
+      background: $white02;
+      font-size: 14px;
+      font-family: $font_main;
+      color: $black03;
+      font-weight: bold;
+   }
+}
+
+.copyright {
+   clear: both;
+   width: 100%;
+   padding-top: 90px;
+   text-align: center;
+
+   &-description {
+      font-size: 14px;
+      font-family: $font_main;
+      color: $grey02;
+      line-height: 1.5;
+   }
+
+   &-link {
+      color: $white01;
+      text-decoration: underline;
+   }
+}
+
